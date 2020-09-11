@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<title>Biblioteca Pura Vida</title>
+	<meta charset="utf-8">
+	<meta name="description" content="Biblioteca">
+	<meta name="keywords" content="HTML, CSS, JavaScript">
+	<link rel="stylesheet" href="static/estilos.css">
+</head>
+
+<body>
+	<header id="cabecera">
+		<div>
+			<h1>Biblioteca Pura Vida</h1>
+		</div>
+	</header>
+	<main>
+		<div id="content">
+			<div id="left">
+				<div id="formulario">
+					<form action="/getOneBook" method="POST">
+						<label>Consultar un libro por titulo:</label>
+						<p>Titulo: <input type="text" name="libro" size="40"></p>
+						<input type="submit" name="enviar" value="Consultar" />
+					</form>
+
+					<form action="/getAllBook" method="GET">
+						<label>Consultar todos los libros:</label>
+						<input type="submit" name="enviar" value="Consultar todo" />
+					</form>
+
+					<form action="/createBook" method="POST">
+						<label>Agregar libros:</label>
+						<p>Titulo: <input type="text" name="titulo" size="40"></p>
+						<p>Autor: <input type="text" name="autor" size="40"></p>
+						<p>Clasificacion: <input type="text" name="clasificacion_id" size="40"></p>
+						<input type="submit" name="enviar" value="Agregar libro" />
+					</form>
+				</div>
+			</div>
+
+			<div id="right">
+				<div id="tabla">
+					<label>Biblioteca:</label>
+					<table>
+						<tr>
+							<th>Titulo</th>
+							<th>Autor</th>
+							<th>Clasificacion</th>
+						</tr>
+
+						{% for datos in list %}
+						<tr>
+							<td>{{datos.titulo}}</td>
+							<td>{{datos.autor}}</td>
+							<td>{{datos.clasificacion_id}}</td>
+						</tr>
+						{% endfor %}
+
+						{% if lista != "No encontrado" %}
+
+						{% for datos in lista %}
+						<tr>
+							<td>{{datos[0]}}</td>
+							<td>{{datos[1]}}</td>
+							<td>{{datos[2]}}</td>
+						</tr>
+						{% endfor %}
+
+						{% endif %}
+
+					</table>
+				</div>
+			</div>
+		</div>
+
+	</main>
+
+
+</body>
+
+</html>

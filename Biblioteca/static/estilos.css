@@ -1,0 +1,100 @@
+/* Resetea todos las configuraciones por defecto que asigna HTML*/
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#cabecera {
+    width: 96%;
+    height: 25px;
+    padding: 2%;
+    background-color: lightblue;
+}
+
+#cabecera>div {
+    width: 960px;
+    margin: 0px auto;
+}
+
+#cabecera h1 {
+    font: bold 32px Arial, sans-serif;
+    color: blue;
+    text-align: center;
+}
+
+#content {
+    overflow: auto;
+    width: 98%;
+    padding: 1%;
+    background: rgb(105, 161, 184);
+}
+
+#left,
+#right {
+    width: 46%;
+    padding: 1%;
+    background: white;
+}
+
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}
+
+#formulario {
+    width: 300px;
+    padding: 16px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: #ccc;
+}
+
+#formulario form label {
+    width: 72px;
+    font-weight: bold;
+}
+
+#formulario form input[type="text"] {
+    width: 180px;
+    padding: 3px 10px;
+    border: 1px solid #f6f6f6;
+    border-radius: 3px;
+    background-color: #f6f6f6;
+    margin: 8px 0;
+    display: inline-block;
+}
+
+#formulario form input[type="submit"] {
+    width: 100%;
+    padding: 8px 16px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: block;
+    color: #fff;
+    background-color: #000;
+}
+
+#tabla label {
+    width: 72px;
+    font-weight: bold;
+}
+
+#tabla table {
+    width: 400px;
+    padding: 16px;
+    border-radius: 10px;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+#tabla table,
+#tabla th,
+#tabla td {
+    border: 1px solid black;
+    margin-top: 10px;
+}
